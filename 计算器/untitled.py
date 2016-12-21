@@ -76,6 +76,17 @@ class Dialog(QDialog, Ui_Dialog):
         m=remove_bracket(pe)
         self.Edit_xianshi.clear()
         self.Edit_xianshi.append(str(m))
+         @pyqtSlot()
+    def on_Button_fenzhi_clicked(self):
+        pe = self.Edit_xianshi.toPlainText()
+        if int(pe) ==0:
+            QMessageBox.information(self,u'提示',u'零不能作为分母')
+            Dialog()
+        else:
+            m=1/(int(pe))
+            self.Edit_xianshi.clear()
+            self.Edit_xianshi.append(str(m))
+            Dialog()
 if __name__ =="__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
