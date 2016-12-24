@@ -8,4 +8,4 @@ python3.5 + PyQt5 +Eric6 在windows7  32位系统可以完美运行
 一个基于百度的语音合成，支持word，text文档，在线合成，(ps：自己需要注册开发者账号去申请，token值一个月内有效)，
 多线程在线合成，python3.5 + PyQt5 +Eric6+pygame+pydub+docx,pygame这里是为播放音乐使用，在windows系统完美运行。其效果图如下。
 
-![image](https://github.com/liwanlei/PyQt5-/blob/master/leizitingshu/icon/ZZTPIKZLH9NU(%25D4X81JM%7D8.png))
+![image](https://github.com/liwanlei/PyQt5-/blob/master/leizitingshu/icon/ZZTPIKZLH9NU\(%25D4X81JM%7D8.png)
