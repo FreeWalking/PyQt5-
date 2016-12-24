@@ -76,11 +76,7 @@ class Dialog(QDialog, Ui_Dialog):
         m=remove_bracket(pe)
         self.Edit_xianshi.clear()
         self.Edit_xianshi.append(str(m))
-<<<<<<< HEAD
-    @pyqtSlot()
-=======
-         @pyqtSlot()
->>>>>>> c7d27594674070f00927626cdd939c3414d660c1
+
     def on_Button_fenzhi_clicked(self):
         pe = self.Edit_xianshi.toPlainText()
         if int(pe) ==0:

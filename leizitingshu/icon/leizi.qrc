@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="hh">
+    <file>548300.gif</file>
+    <file>1170244.gif</file>
+    <file>IMG_5356.JPG</file>
+    <file>1173189.gif</file>
+    <file>about-me.png</file>
+    <file>copy_clipboard_lined.png</file>
+    <file>cut.png</file>
+    <file>f08b.png</file>
+    <file>male-user-accept.png</file>
+    <file>open.png</file>
+    <file>order.png</file>
+    <file>play48.png</file>
+    <file>speaker9.png</file>
+  </qresource>
+</RCC>
