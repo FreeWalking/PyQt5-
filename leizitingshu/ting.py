@@ -23,9 +23,9 @@ def text_to_mp3(queue,filename,per):
     i=0
     while queue.qsize():
         me=readQ(queue)
-        cuid = '2cc70758f7a04435b3f8e386c986fe'
+        cuid = '2cc70758f7a04435b3f8e386c986fe'#这个需要自己去百度云语音获取
         tex = urllib.parse.quote(me)
-        tok = '23.5488fa28e5fc7545ae7c26f78af78df6.2592000.1485133745.1462177047-9016631'
+        tok = '23.5488fa28e5fc7545ae7c26f78af78df6.2592000.1485133745.1462177047-9016631'#有效期为一个月，用完可以自己获取，也可以通过函数实现
         url = "http://tsn.baidu.com/text2audio?tex=" + tex + '&lan=zh&cuid=' + cuid + '&ctp=1&tok=' + tok + '&per=' + per
         response = urllib.request.Request(url)
         html = urllib.request.urlopen(response).read()
@@ -43,7 +43,7 @@ def text_to_mp3(queue,filename,per):
     time.sleep(2)
     self.progressBar.setValue(60)
     meke_one_file(my_mp3_queue)
-def come_mp3(song1,song2):
+def come_mp3(song1,song2):#合成mp3
     f1=AudioSegment.from_mp3(song1)
     f2 =AudioSegment.from_mp3(song2)
     silent = AudioSegment.silent(duration=1000)
@@ -56,7 +56,7 @@ def come_mp3(song1,song2):
         os.remove(song1)
     os.remove(song2)
     return 'listening.mp3'
-def playaudio(file):
+def playaudio(file):#利用pygame播放
     pygame.mixer.init()
     track = pygame.mixer.music.load(file)
     pygame.mixer.music.play()
@@ -67,7 +67,7 @@ def meke_one_file(queue):
     ui.progressBar.setValue(100)
     file_name=u'listening.mp3'
     playaudio(file_name)
-class MyThread(threading.Thread):
+class MyThread(threading.Thread):#多线程
     def __init__(self, func,filename,per, name=''):
         threading.Thread.__init__(self)
         self.name = name
